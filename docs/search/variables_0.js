@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rank',['rank',['../structcard.html#ae355921876ab9466544d9971bbc6821b',1,'card']]]
+  ['cards',['cards',['../structdeck.html#afe30739565c17683ef7a250ff96c6c42',1,'deck']]]
 ];
