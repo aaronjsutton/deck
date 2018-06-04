@@ -45,6 +45,14 @@ typedef struct card {
 
 typedef struct deck {
   card *cards;
+  int total;
 } deck;
 
+void deck_alloc(deck*);
+void deck_fill(deck*);
+void deck_free(deck*);
+
+void deck_cut(deck*, deck*);
+card *deck_draw_top(deck*);
+card *deck_draw_rand(deck*);
 #endif
