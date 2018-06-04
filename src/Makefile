@@ -1,10 +1,9 @@
-CC 		= clang
+CC 		= gcc
 CFLAGS  = -Wall
-LDFLAGS = -shared
 LIBNAME	= deck
 
 all: deck.o shuffle.o
-	$(CC) $(CFLAGS) *.o -o lib$(LIBNAME).so $(LDFLAGS)
+	ar -r lib$(LIBNAME).a *.o
 
 deck.o:
 	$(CC) -c $(CFLAGS) deck.c
@@ -14,4 +13,4 @@ shuffle.o:
 
 .PHONY: clean
 clean:
-	-rm *.o lib$(LIBNAME).so
+	-rm *.o lib$(LIBNAME).a
