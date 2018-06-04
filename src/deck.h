@@ -8,12 +8,12 @@
 #ifndef DECK
 #define DECK
 
-#define DECK_MAX_SIZE   52;
+#define DECK_MAX_SIZE 52
 
-#define RANK_ACE    1;
-#define RANK_JACK   11;
-#define RANK_QUEEN  12;
-#define RANK_KING   13;
+#define RANK_ACE    1
+#define RANK_JACK   11
+#define RANK_QUEEN  12
+#define RANK_KING   13
 
 typedef enum suit {
   clubs = 1,
@@ -44,16 +44,19 @@ typedef struct card {
 } card;
 
 typedef struct deck {
-  card *cards;  /**< An array of cards currently in the deck .           */
-  int total;    /**< The total number of cards in the deck.             */
-                /**< @warning Exceeding the max deck size is undefined. */
+  card card[DECK_MAX_SIZE];   /**< An array of cards currently in the deck .          */
+  int total;                  /**< The total number of cards in the deck.             */
+                              /**< @warning Exceeding the max deck size is undefined. */
 } deck;
 
-void deck_alloc(deck*);
+deck *deck_alloc();
 void deck_fill(deck*);
 void deck_free(deck*);
 
 void deck_cut(deck*, deck*);
-card *deck_draw_top(deck*);
-card *deck_draw_rand(deck*);
+card *deck_pick(deck*);
+card *deck_pick_rand(deck*);
+card *deck_draw(deck*, deck*);
+card *deck_draw_rand(deck*, deck*);
+
 #endif
