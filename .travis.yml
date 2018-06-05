@@ -20,3 +20,5 @@ script: make && make test
 deploy:
   provider: script
   script: ruby scripts/generate_docs.rb
+  on:
+    branch: master
