@@ -17,8 +17,6 @@ before_install:
 
 script: make && make test
 
-
-
 deploy:
   provider: script
-  script: ruby generate_docs.rb
+  script: ruby scripts/generate_docs.rb
