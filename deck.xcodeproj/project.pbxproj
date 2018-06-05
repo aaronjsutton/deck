@@ -22,8 +22,9 @@
 
 /* Begin PBXBuildFile section */
 		CC0FED3B20C72661001108A4 /* munit.o in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1775F020C6D5CD00A183A2 /* munit.o */; };
+		CCACB5D420C73E5E008AE676 /* deck.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775E720C6D5CD00A183A2 /* deck.c */; };
+		CCACB5D520C73E60008AE676 /* shuffle.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775E520C6D5CD00A183A2 /* shuffle.c */; };
 		CCEE8F1820C71D880097C60D /* deck_unit_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEE8F1720C71D880097C60D /* deck_unit_tests.m */; };
-		CCEE8F1F20C71D9F0097C60D /* libdeck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCEE8F1E20C71D9F0097C60D /* libdeck.a */; };
 		CCEE8F2020C71ED10097C60D /* deck_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775FB20C6D5CD00A183A2 /* deck_tests.c */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +67,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC0FED3B20C72661001108A4 /* munit.o in Frameworks */,
-				CCEE8F1F20C71D9F0097C60D /* libdeck.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +94,9 @@
 		CC1775E120C6D5CD00A183A2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CC1775E720C6D5CD00A183A2 /* deck.c */,
 				CC1775E320C6D5CD00A183A2 /* deck.h */,
 				CC1775E520C6D5CD00A183A2 /* shuffle.c */,
-				CC1775E720C6D5CD00A183A2 /* deck.c */,
 				CC1775E920C6D5CD00A183A2 /* shuffle.h */,
 				CC1775E420C6D5CD00A183A2 /* Makefile */,
 			);
@@ -108,9 +108,9 @@
 			children = (
 				CC1775ED20C6D5CD00A183A2 /* munit */,
 				CCEE8F1920C71D880097C60D /* Info.plist */,
-				CCEE8F1720C71D880097C60D /* deck_unit_tests.m */,
 				CC1775FB20C6D5CD00A183A2 /* deck_tests.c */,
 				CC0FED3A20C721E6001108A4 /* test-wrapper.h */,
+				CCEE8F1720C71D880097C60D /* deck_unit_tests.m */,
 				CC1775EC20C6D5CD00A183A2 /* Makefile */,
 			);
 			path = test;
@@ -259,6 +259,8 @@
 			files = (
 				CCEE8F1820C71D880097C60D /* deck_unit_tests.m in Sources */,
 				CCEE8F2020C71ED10097C60D /* deck_tests.c in Sources */,
+				CCACB5D520C73E60008AE676 /* shuffle.c in Sources */,
+				CCACB5D420C73E5E008AE676 /* deck.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

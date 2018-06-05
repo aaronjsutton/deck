@@ -11,30 +11,29 @@
 #include "deck.h"
 
 /**
-  * Allocate a new deck.
-  *
-  * @returns Pointer to the newly allocated deck.
-  */
+ Allocate a new deck.
+
+ @return Pointer to a newly allocated deck.
+ */
 deck *deck_alloc() {
   return malloc(sizeof(deck));
 }
 
 /**
-  * Free a deck pointer.
-  *
-  * @param[in] d    The pointer to deinitialize and free.
-  */
+ Free a deck pointer.
+
+ @param d The pointer to be freed.
+ */
 void deck_free(deck *d) {
   free(d);
 }
 
 /**
-  * Fill a deck with cards.
-  * Populates a `deck` with card values from
-  * a standard 52-card deck.
-  *
-  * @param[in,out] d The deck to fill with cards.
-  */
+ Fill a deck with cards.
+ Fills a `deck` with a standard 52-card set.
+
+ @param d Pointer of the deck to fill.
+ */
 void deck_fill(deck *d) {
   int s, r;
   d->total = 0;
