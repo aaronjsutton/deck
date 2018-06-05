@@ -1,22 +1,22 @@
 language: c
 compiler:
-  - gcc
+- gcc
 os:
-  - linux
-  - osx
-
+- linux
+- osx
 addons:
   apt:
     packages:
-      - doxygen
+    - doxygen
 
 before_install:
+  - openssl aes-256-cbc -K $encrypted_9b7d1c7a075c_key -iv $encrypted_9b7d1c7a075c_iv
+  -in script/deploy_rsa.enc -out deploy_rsa -d
+  - ssh-add deploy_rsa
+
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install doxygen; fi
-
-
 script: make && make test
-
 deploy:
   provider: script
   script: ruby scripts/generate_docs.rb

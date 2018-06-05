@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby -wKU
 #
 # generate_docs.rb - Generate Documentation using Doxygen
 #
@@ -12,8 +13,3 @@ end
 
 Dir.chdir "#{__dir__}/.."
 system "doxygen"
-
-`tar cvzf docs.tar.gz docs/`
-exit $? unless $? == 0
-`rm -r docs`
-exit $? unless $? == 0
