@@ -18,12 +18,12 @@ before_install:
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install doxygen; fi
 
+after_success: ruby scripts/generate_docs.rb
+
 script: make && make test
 deploy:
   provider: script
   skip_cleanup: true
-  script:
-    - ruby scripts/generate_docs.rb
-    - ruby scripts/upload_docs.rb
+  script: rsync -aruv docs/* docs@aaronjsutton.com:/var/www/github/deck
   on:
     branch: master

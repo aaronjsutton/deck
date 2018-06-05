@@ -5,8 +5,8 @@
 # Copyright (c) 2018, Aaron Sutton <aaronjsutton@icloud.com>
 #
 
-docs_path = "/var/www/github/deck"
+docs_path = ""
 
 Dir.chdir "#{__dir__}/.."
 
-exec "rsync -aruv docs/* docs@aaronjsutton.com:#{docs_path}"
+exec "#{docs_path}"
