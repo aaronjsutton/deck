@@ -6,7 +6,7 @@ os:
 - osx
 addons:
   hosts:
-  -
+  - aaronjsutton.com
   apt:
     packages:
     - doxygen
