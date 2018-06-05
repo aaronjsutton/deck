@@ -65,7 +65,7 @@
 		CC1775F920C6D5CD00A183A2 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		CC1775FB20C6D5CD00A183A2 /* deck_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deck_tests.c; sourceTree = "<group>"; };
 		CCACB5D920C74334008AE676 /* shuffle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = shuffle.c; sourceTree = "<group>"; };
-		CCACB5DA20C743F5008AE676 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		CCACB5DA20C743F5008AE676 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CCEE8F1520C71D880097C60D /* deck-unit-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "deck-unit-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEE8F1720C71D880097C60D /* deck_unit_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = deck_unit_tests.m; sourceTree = "<group>"; };
 		CCEE8F1920C71D880097C60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };

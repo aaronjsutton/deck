@@ -1,5 +1,4 @@
-# :spades: :diamonds: Deck :hearts: :clubs:
-
+![Deck](assets.xcassets/Deck.imageset/Deck.png)
 Deck is a library that models and manipulates a
 simulated deck of cards.  
 
