@@ -9,4 +9,4 @@ docs_path = "/var/www/github/deck"
 
 Dir.chdir "#{__dir__}/.."
 
-system "rsync -aruv docs/* docs@aaronjsutton.com:#{docs_path}"
+exec "rsync -aruv docs/* docs@aaronjsutton.com:#{docs_path}"
