@@ -26,6 +26,6 @@ script: make && make test
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -aruv docs/* docs@aaronjsutton.com:/var/www/github/deck
+  script: scp -r docs/* docs@aaronjsutton.com:/var/www/github/deck
   on:
     branch: master
