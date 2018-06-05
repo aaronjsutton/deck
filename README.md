@@ -1,4 +1,5 @@
-![Deck](assets.xcassets/Deck.imageset/Deck.png)
+![Deck](assets.xcassets/Deck.imageset/Deck@2x.png)
+
 Deck is a library that models and manipulates a
 simulated deck of cards.  
 
