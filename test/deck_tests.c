@@ -1,5 +1,6 @@
 #include "munit/munit.h"
 #include "../src/deck.h"
+#include "test-wrapper.h"
 
 /****************************************/
 /*            Setup/Teardown            */
@@ -75,4 +76,8 @@ static const MunitSuite test_suite = {
 
 int main(int argc, char* argv[MUNIT_ARRAY_PARAM(argc + 1)]) {
   return munit_suite_main(&test_suite, (void*) "µnit", argc, argv);
+}
+
+int objc_run() {
+  return munit_suite_main(&test_suite, (void*) "µnit", 0, NULL);
 }

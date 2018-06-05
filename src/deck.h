@@ -49,7 +49,7 @@ typedef struct deck {
                               /**< @warning Exceeding the max deck size is undefined. */
 } deck;
 
-deck *deck_alloc();
+deck *deck_alloc(void);
 void deck_fill(deck*);
 void deck_free(deck*);
 
