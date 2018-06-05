@@ -21,7 +21,7 @@ before_install:
 script: make && make test
 deploy:
   provider: script
-  skip_clean: true
+  skip_cleanup: true
   script:
     - ruby scripts/generate_docs.rb
     - ruby scripts/upload_docs.rb
