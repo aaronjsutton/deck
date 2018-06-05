@@ -8,6 +8,7 @@ addons:
   apt:
     packages:
     - doxygen
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_75641af13479_key -iv $encrypted_75641af13479_iv
   -in scripts/deploy/deploy_rsa.enc -out /tmp/deploy_rsa -d
@@ -16,6 +17,7 @@ before_install:
 - ssh-add /tmp/deploy_rsa
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install doxygen; fi
+
 script: make && make test
 deploy:
   provider: script
