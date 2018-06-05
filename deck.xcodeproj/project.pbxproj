@@ -118,11 +118,11 @@
 			isa = PBXGroup;
 			children = (
 				CC1775ED20C6D5CD00A183A2 /* munit */,
-				CCEE8F1920C71D880097C60D /* Info.plist */,
 				CC1775FB20C6D5CD00A183A2 /* deck_tests.c */,
 				CC0FED3A20C721E6001108A4 /* test-wrapper.h */,
 				CCEE8F1720C71D880097C60D /* deck_unit_tests.m */,
 				CC1775EC20C6D5CD00A183A2 /* Makefile */,
+				CCEE8F1920C71D880097C60D /* Info.plist */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -157,8 +157,8 @@
 		CCE9487420C6D5860072DFF1 = {
 			isa = PBXGroup;
 			children = (
-				CC1775D720C6D5CD00A183A2 /* Doxyfile */,
 				CC1775D920C6D5CD00A183A2 /* README.md */,
+				CC1775D720C6D5CD00A183A2 /* Doxyfile */,
 				CCACB5DA20C743F5008AE676 /* assets.xcassets */,
 				CC1775DA20C6D5CD00A183A2 /* scripts */,
 				CC1775E120C6D5CD00A183A2 /* src */,
