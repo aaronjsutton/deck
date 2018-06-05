@@ -22,11 +22,21 @@
 
 /* Begin PBXBuildFile section */
 		CC0FED3B20C72661001108A4 /* munit.o in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1775F020C6D5CD00A183A2 /* munit.o */; };
-		CCACB5D420C73E5E008AE676 /* deck.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775E720C6D5CD00A183A2 /* deck.c */; };
-		CCACB5D520C73E60008AE676 /* shuffle.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775E520C6D5CD00A183A2 /* shuffle.c */; };
+		CCACB5DD20C747B4008AE676 /* deck.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775E720C6D5CD00A183A2 /* deck.c */; };
+		CCACB5DE20C747D1008AE676 /* shuffle.c in Sources */ = {isa = PBXBuildFile; fileRef = CCACB5D920C74334008AE676 /* shuffle.c */; };
 		CCEE8F1820C71D880097C60D /* deck_unit_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEE8F1720C71D880097C60D /* deck_unit_tests.m */; };
 		CCEE8F2020C71ED10097C60D /* deck_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775FB20C6D5CD00A183A2 /* deck_tests.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCACB5E320C74898008AE676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCE9487520C6D5860072DFF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC9106AF20C6E9990076CA21;
+			remoteInfo = deck;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CC0FED3A20C721E6001108A4 /* test-wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-wrapper.h"; sourceTree = "<group>"; };
@@ -38,7 +48,6 @@
 		CC1775E020C6D5CD00A183A2 /* generate_docs.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = generate_docs.rb; sourceTree = "<group>"; };
 		CC1775E320C6D5CD00A183A2 /* deck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deck.h; sourceTree = "<group>"; };
 		CC1775E420C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		CC1775E520C6D5CD00A183A2 /* shuffle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = shuffle.c; sourceTree = "<group>"; };
 		CC1775E720C6D5CD00A183A2 /* deck.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c; path = deck.c; sourceTree = "<group>"; };
 		CC1775E920C6D5CD00A183A2 /* shuffle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shuffle.h; sourceTree = "<group>"; };
 		CC1775EC20C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -55,6 +64,8 @@
 		CC1775F820C6D5CD00A183A2 /* munit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = munit.c; sourceTree = "<group>"; };
 		CC1775F920C6D5CD00A183A2 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		CC1775FB20C6D5CD00A183A2 /* deck_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deck_tests.c; sourceTree = "<group>"; };
+		CCACB5D920C74334008AE676 /* shuffle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = shuffle.c; sourceTree = "<group>"; };
+		CCACB5DA20C743F5008AE676 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		CCEE8F1520C71D880097C60D /* deck-unit-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "deck-unit-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEE8F1720C71D880097C60D /* deck_unit_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = deck_unit_tests.m; sourceTree = "<group>"; };
 		CCEE8F1920C71D880097C60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,7 +107,7 @@
 			children = (
 				CC1775E720C6D5CD00A183A2 /* deck.c */,
 				CC1775E320C6D5CD00A183A2 /* deck.h */,
-				CC1775E520C6D5CD00A183A2 /* shuffle.c */,
+				CCACB5D920C74334008AE676 /* shuffle.c */,
 				CC1775E920C6D5CD00A183A2 /* shuffle.h */,
 				CC1775E420C6D5CD00A183A2 /* Makefile */,
 			);
@@ -148,6 +159,7 @@
 			children = (
 				CC1775D720C6D5CD00A183A2 /* Doxyfile */,
 				CC1775D920C6D5CD00A183A2 /* README.md */,
+				CCACB5DA20C743F5008AE676 /* assets.xcassets */,
 				CC1775DA20C6D5CD00A183A2 /* scripts */,
 				CC1775E120C6D5CD00A183A2 /* src */,
 				CC1775EA20C6D5CD00A183A2 /* test */,
@@ -180,6 +192,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CCACB5E420C74898008AE676 /* PBXTargetDependency */,
 			);
 			name = "deck-unit-tests";
 			productName = "deck-unit-tests";
@@ -249,6 +262,7 @@
 			shellPath = /bin/sh;
 			shellScript = "make
 ";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -257,14 +271,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCEE8F1820C71D880097C60D /* deck_unit_tests.m in Sources */,
+				CCACB5DD20C747B4008AE676 /* deck.c in Sources */,
+				CCACB5DE20C747D1008AE676 /* shuffle.c in Sources */,
 				CCEE8F2020C71ED10097C60D /* deck_tests.c in Sources */,
-				CCACB5D520C73E60008AE676 /* shuffle.c in Sources */,
-				CCACB5D420C73E5E008AE676 /* deck.c in Sources */,
+				CCEE8F1820C71D880097C60D /* deck_unit_tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCACB5E420C74898008AE676 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC9106AF20C6E9990076CA21 /* deck */;
+			targetProxy = CCACB5E320C74898008AE676 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CC9106B120C6E9990076CA21 /* Debug */ = {

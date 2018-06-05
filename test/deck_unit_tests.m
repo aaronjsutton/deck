@@ -20,7 +20,7 @@
  µnit test wrapper.
  */
 - (void)testDeck {
-  int res = objc_run();
+  int res = obcj_deck_tests();
   XCTAssert(res == 0);
 }
 

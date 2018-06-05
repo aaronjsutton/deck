@@ -8,6 +8,6 @@
 #ifndef test_wrapper_h
 #define test_wrapper_h
 
-int objc_run(void);
+int obcj_deck_tests(void);
 
 #endif /* test_wrapper_h */

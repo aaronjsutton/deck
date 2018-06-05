@@ -78,6 +78,6 @@ int main(int argc, char* argv[MUNIT_ARRAY_PARAM(argc + 1)]) {
   return munit_suite_main(&test_suite, (void*) "µnit", argc, argv);
 }
 
-int objc_run() {
+int obcj_deck_tests() {
   return munit_suite_main(&test_suite, (void*) "µnit", 0, NULL);
 }
