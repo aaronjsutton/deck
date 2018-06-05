@@ -10,7 +10,7 @@ unless $? == 0
   exit 1
 end
 
-Dir.chdir "#{__file__}/.."
+Dir.chdir "#{__dir__}/.."
 system "doxygen"
 
 `tar cvzf docs.tar.gz docs/`
