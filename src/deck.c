@@ -36,5 +36,12 @@ void deck_free(deck *d) {
   * @param[in,out] d The deck to fill with cards.
   */
 void deck_fill(deck *d) {
-  
+  int s, r;
+  d->total = 0;
+  for (s = clubs; s <= spades; s++) {
+    for (r = RANK_ACE; r <= RANK_KING; r++) {
+      card c = {s, r};
+      d->cards[d->total++] = c;
+    }
+  }
 }

@@ -1,7 +1,6 @@
 #include "munit/munit.h"
 #include "../src/deck.h"
 
-
 /****************************************/
 /*            Setup/Teardown            */
 /****************************************/
@@ -31,7 +30,16 @@ test_create(const MunitParameter params[], void* data) {
 static MunitResult
 test_fill(const MunitParameter params[], void *fixture) {
   deck *d = (deck*) fixture;
+  int s, r;
   deck_fill(d);
+  int i = 0;
+  for (s = clubs; s <= spades; s++) {
+    for (r = RANK_ACE; r <= RANK_KING; r++) {
+      munit_assert_int(d->cards[i].suit, ==, s);
+      munit_assert_int(d->cards[i].rank, ==, r);
+      i++;
+    }
+  }
   return MUNIT_OK;
 }
 
