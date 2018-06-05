@@ -5,7 +5,7 @@ os:
 - linux
 - osx
 addons:
-  hosts:
+  ssh_known_hosts:
   - aaronjsutton.com
   apt:
     packages:
@@ -23,6 +23,6 @@ script: make && make test
 deploy:
   provider: script
   skip_cleanup: true
-  script: scp -i /tmp/deploy_rsa docs/* docs@aaronjsutton.com:/var/www/github/deck
+  script: rsync -aruv docs/* docs@aaronjsutton.com:/var/www/github/deck
   on:
     branch: master
