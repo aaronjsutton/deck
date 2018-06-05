@@ -3,3 +3,4 @@
 *.a
 test-runner
 docs/*
+docs.tar.gz

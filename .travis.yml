@@ -1,4 +1,24 @@
 language: c
 compiler:
-  - clang
+  - gcc
+os:
+  - linux
+  - osx
+
+addons:
+  apt:
+    packages:
+      - doxygen
+
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install doxygen; fi
+
+
 script: make && make test
+
+
+
+deploy:
+  provider: script
+  script: ruby generate_docs.rb
