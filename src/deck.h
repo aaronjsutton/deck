@@ -44,7 +44,7 @@ typedef struct card {
 } card;
 
 typedef struct deck {
-  card cards[DECK_MAX_SIZE];   /**< An array of cards currently in the deck .          */
+  card *cards;                 /**< An array of cards currently in the deck .          */
   int total;                  /**< The total number of cards in the deck.             */
                               /**< @warning Exceeding the max deck size is undefined. */
 } deck;
@@ -53,7 +53,7 @@ deck *deck_alloc(void);
 void deck_fill(deck*);
 void deck_free(deck*);
 
-void deck_cut(deck*, deck*);
+deck *deck_cut(deck*);
 card *deck_pick(deck*);
 card *deck_pick_rand(deck*);
 card *deck_draw(deck*, deck*);

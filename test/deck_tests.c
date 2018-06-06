@@ -44,6 +44,37 @@ test_fill(const MunitParameter params[], void *fixture) {
   return MUNIT_OK;
 }
 
+static MunitResult
+test_cut(const MunitParameter params[], void *fixture) {
+  deck *d = (deck*) fixture;
+  int s, r;
+  deck_fill(d);
+  deck *n;
+  n = deck_cut(d);
+
+  munit_assert_int(d->total, ==, n->total);
+
+  int i = 0;
+  for (s = hearts; s <= spades; s++) {
+    for (r = RANK_ACE; r <= RANK_KING; r++) {
+      munit_assert_int(d->cards[i].suit, ==, s);
+      munit_assert_int(d->cards[i].rank, ==, r);
+      i++;
+    }
+  }
+
+  i = 0;
+  for (s = clubs; s <= diamonds; s++) {
+    for (r = RANK_ACE; r <= RANK_KING; r++) {
+      munit_assert_int(n->cards[i].suit, ==, s);
+      munit_assert_int(n->cards[i].rank, ==, r);
+      i++;
+    }
+  }
+  deck_free(n);
+  return MUNIT_OK;
+}
+
 
 /****************************************/
 /*              Test Lists              */
@@ -52,6 +83,7 @@ test_fill(const MunitParameter params[], void *fixture) {
 static MunitTest test_suite_tests[] = {
   { (char*) "/create", test_create, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL },
   { (char*) "/fill", test_fill, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
+  { (char*) "/cut", test_cut, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
   { NULL, NULL, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL }
 };
 

@@ -16,7 +16,10 @@
  @return Pointer to a newly allocated deck.
  */
 deck *deck_alloc() {
-  return malloc(sizeof(deck));
+  deck *d = malloc(sizeof(deck));
+  d->cards = malloc(sizeof(card) * DECK_MAX_SIZE);
+  d->total = 0;
+  return d;
 }
 
 /**
@@ -26,6 +29,14 @@ deck *deck_alloc() {
  */
 void deck_free(deck *d) {
   free(d);
+}
+
+static
+void deck_resize(deck *d, int by_size) {
+  d->cards = (card*)realloc(d->cards, sizeof(card) * by_size);
+  if (d->cards == NULL) {
+    exit(1);
+  }
 }
 
 /**
@@ -43,4 +54,30 @@ void deck_fill(deck *d) {
       d->cards[d->total++] = c;
     }
   }
+}
+
+/**
+ Cuts a deck in half.
+
+ @param o The deck to cut. This deck is modified in place.
+ @return The cut-off half of the original deck.
+ */
+deck *deck_cut(deck *o) {
+  deck *n;
+  int c, i;
+
+  n = deck_alloc();
+
+  c = o->total / 2;
+  for (i = 0; i <= c; i++) {
+    n->cards[i] = o->cards[i];
+  }
+  for (i = c; i < o->total; i++) {
+    o->cards[i - c] = o->cards[i];
+    o->cards[i] = (card){0, 0};
+  }
+  deck_resize(o, c);
+  o->total = c;
+  n->total = c;
+  return n;
 }
