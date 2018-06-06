@@ -7,6 +7,12 @@ simulated deck of cards.
 
 Deck is currently _in early development_. **Stay tuned!**
 
+# Usage
+
+
+## Documentation
+For detailed usage, read the [API Documentation](https://docs.aaronjsutton.com/deck)
+
 # Testing
 
 Testing can be done in one of two ways. Manually on any system, or in Xcode on macOS.
