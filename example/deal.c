@@ -1,6 +1,6 @@
 //
 //  main.c
-//  debug
+//  example
 //
 //  Created by Aaron Sutton on 6/5/18.
 //
