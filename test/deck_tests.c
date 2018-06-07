@@ -76,11 +76,13 @@ test_cut(const MunitParameter params[], void *fixture) {
 }
 
 static MunitResult
-test_draw(const MunitParameter params[], void *fixture) {
+test_pick(const MunitParameter params[], void *fixture) {
   deck *d = (deck*) fixture;
   deck_fill(d);
   card *c = deck_pick(d);
   munit_assert_int(c->rank, ==, RANK_KING);
+  c = deck_pick_rand(d);
+  munit_assert_not_null(c);
   return MUNIT_OK;
 }
 
@@ -92,7 +94,7 @@ static MunitTest test_suite_tests[] = {
   { (char*) "/create", test_create, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL },
   { (char*) "/fill", test_fill, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
   { (char*) "/cut", test_cut, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
-  { (char*) "/pick", test_draw, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
+  { (char*) "/pick", test_pick, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
   { NULL, NULL, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL }
 };
 

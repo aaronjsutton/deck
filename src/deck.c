@@ -92,3 +92,9 @@ deck *deck_cut(deck *o) {
 card *deck_pick(deck *d) {
   return &(d->cards[d->total - 1]);
 }
+
+card *deck_pick_rand(deck *d) {
+  int r;
+  r = rand() % d->total - 1;
+  return &(d->cards[r]);
+}
