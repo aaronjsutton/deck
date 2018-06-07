@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "shuffle.h"
 
 /**
@@ -28,9 +29,15 @@ void deck_riffle_shuffle(deck *d) {
   cut = deck_cut(copy);
 
   s = deck_alloc();
+  srand((unsigned int)time(0));
   for (i = 0; i < copy->total; i++) {
-    deck_add(s, &copy->cards[i]);
-    deck_add(s, &cut->cards[i]);
+    if (rand() % 2 == 0) {
+      deck_add(s, &copy->cards[i]);
+      deck_add(s, &cut->cards[i]);
+    } else {
+      deck_add(s, &cut->cards[i]);
+      deck_add(s, &copy->cards[i]);
+    }
   }
   memcpy(d->cards, s->cards, sizeof(card) * s->total);
 

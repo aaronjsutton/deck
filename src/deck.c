@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "deck.h"
 
 /**
@@ -107,6 +108,7 @@ card *deck_pick(deck *d) {
  */
 card *deck_pick_rand(deck *d) {
   int r;
+  srand((unsigned int)time(0));
   r = rand() % d->total - 1;
   return &(d->cards[r]);
 }
@@ -135,6 +137,7 @@ card *deck_draw(deck *d) {
 card *deck_draw_rand(deck *d) {
   static card c;
   int i, r;
+  srand((unsigned int)time(0));
   r = rand() %  d->total - 1;
   c = d->cards[r];
   d->total--;
