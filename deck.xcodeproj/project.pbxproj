@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		CC0E129620C77E95002A3839 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CC0E129520C77E95002A3839 /* main.c */; };
+		CC0E129620C77E95002A3839 /* deal.c in Sources */ = {isa = PBXBuildFile; fileRef = CC0E129520C77E95002A3839 /* deal.c */; };
 		CC0E129B20C77ED1002A3839 /* deck.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775E720C6D5CD00A183A2 /* deck.c */; };
 		CC0E129C20C77ED1002A3839 /* shuffle.c in Sources */ = {isa = PBXBuildFile; fileRef = CCACB5D920C74334008AE676 /* shuffle.c */; };
 		CC0FED3B20C72661001108A4 /* munit.o in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1775F020C6D5CD00A183A2 /* munit.o */; };
@@ -54,8 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CC0E129320C77E95002A3839 /* debug */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = debug; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC0E129520C77E95002A3839 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		CC0E129320C77E95002A3839 /* example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = example; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0E129520C77E95002A3839 /* deal.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deal.c; sourceTree = "<group>"; };
 		CC0FED3A20C721E6001108A4 /* test-wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-wrapper.h"; sourceTree = "<group>"; };
 		CC1775D720C6D5CD00A183A2 /* Doxyfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
 		CC1775D820C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -108,12 +108,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC0E129420C77E95002A3839 /* debug */ = {
+		CC0E129420C77E95002A3839 /* example */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E129520C77E95002A3839 /* main.c */,
+				CC0E129520C77E95002A3839 /* deal.c */,
 			);
-			path = debug;
+			path = example;
 			sourceTree = "<group>";
 		};
 		CC1775DA20C6D5CD00A183A2 /* scripts */ = {
@@ -182,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				CCEE8F1520C71D880097C60D /* deck-unit-tests.xctest */,
-				CC0E129320C77E95002A3839 /* debug */,
+				CC0E129320C77E95002A3839 /* example */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 				CC1775E120C6D5CD00A183A2 /* src */,
 				CC1775EA20C6D5CD00A183A2 /* test */,
 				CC1775D820C6D5CD00A183A2 /* Makefile */,
-				CC0E129420C77E95002A3839 /* debug */,
+				CC0E129420C77E95002A3839 /* example */,
 				CC17761320C6E69C00A183A2 /* Products */,
 				CCEE8F1D20C71D9F0097C60D /* Frameworks */,
 			);
@@ -215,9 +215,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CC0E129220C77E95002A3839 /* debug */ = {
+		CC0E129220C77E95002A3839 /* example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC0E129720C77E95002A3839 /* Build configuration list for PBXNativeTarget "debug" */;
+			buildConfigurationList = CC0E129720C77E95002A3839 /* Build configuration list for PBXNativeTarget "example" */;
 			buildPhases = (
 				CC0E128F20C77E95002A3839 /* Sources */,
 				CC0E129020C77E95002A3839 /* Frameworks */,
@@ -227,9 +227,9 @@
 			);
 			dependencies = (
 			);
-			name = debug;
+			name = example;
 			productName = debug;
-			productReference = CC0E129320C77E95002A3839 /* debug */;
+			productReference = CC0E129320C77E95002A3839 /* example */;
 			productType = "com.apple.product-type.tool";
 		};
 		CCEE8F1420C71D880097C60D /* deck-unit-tests */ = {
@@ -284,7 +284,7 @@
 			targets = (
 				CC9106AF20C6E9990076CA21 /* deck */,
 				CCEE8F1420C71D880097C60D /* deck-unit-tests */,
-				CC0E129220C77E95002A3839 /* debug */,
+				CC0E129220C77E95002A3839 /* example */,
 			);
 		};
 /* End PBXProject section */
@@ -328,7 +328,7 @@
 			files = (
 				CC0E129B20C77ED1002A3839 /* deck.c in Sources */,
 				CC0E129C20C77ED1002A3839 /* shuffle.c in Sources */,
-				CC0E129620C77E95002A3839 /* main.c in Sources */,
+				CC0E129620C77E95002A3839 /* deal.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +605,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CC0E129720C77E95002A3839 /* Build configuration list for PBXNativeTarget "debug" */ = {
+		CC0E129720C77E95002A3839 /* Build configuration list for PBXNativeTarget "example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC0E129820C77E95002A3839 /* Debug */,
