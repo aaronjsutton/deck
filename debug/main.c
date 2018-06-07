@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include "../src/deck.h"
+#include "../src/shuffle.h"
 
 int main(int argc, const char * argv[]) {
 	// insert code here...
@@ -15,8 +16,9 @@ int main(int argc, const char * argv[]) {
   c = deck_alloc();
 
   deck_fill(d);
-  deck_cut(d, c);
-
+  for (int i = 0; i <= 3; i++) {
+    deck_riffle_shuffle(d);
+  }
   deck_free(d);
   deck_free(c);
 	return 0;

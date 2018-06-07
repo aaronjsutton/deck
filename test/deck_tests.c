@@ -1,5 +1,6 @@
 #include "munit/munit.h"
 #include "../src/deck.h"
+#include "../src/shuffle.h"
 #include "test-wrapper.h"
 
 /****************************************/
@@ -41,6 +42,11 @@ test_fill(const MunitParameter params[], void *fixture) {
       i++;
     }
   }
+
+  card c = {clubs, RANK_ACE};
+  deck_add(d, &c);
+  munit_assert_int(d->cards[52].suit, ==, clubs);
+
   return MUNIT_OK;
 }
 
@@ -86,6 +92,31 @@ test_pick(const MunitParameter params[], void *fixture) {
   return MUNIT_OK;
 }
 
+static MunitResult
+test_draw(const MunitParameter params[], void *fixture) {
+  deck *d = (deck*) fixture;
+  deck_fill(d);
+  card *c = deck_draw(d);
+  munit_assert_int(c->rank, ==, RANK_KING);
+  munit_assert_int(d->total, ==, 51);
+  c = deck_draw(d);
+  munit_assert_int(c->rank, ==, RANK_QUEEN);
+  munit_assert_int(d->total, ==, 50);
+  c = deck_draw_rand(d);
+  munit_assert_not_null(c);
+  munit_assert_int(d->total, ==, 49);
+  return MUNIT_OK;
+}
+
+static MunitResult
+test_shuffle(const MunitParameter params[], void *fixture) {
+  deck *d = (deck*) fixture;
+  deck_fill(d);
+  deck_riffle_shuffle(d);
+  munit_assert_not_null(d);
+  return MUNIT_OK;
+}
+
 /****************************************/
 /*              Test Lists              */
 /****************************************/
@@ -95,6 +126,8 @@ static MunitTest test_suite_tests[] = {
   { (char*) "/fill", test_fill, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
   { (char*) "/cut", test_cut, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
   { (char*) "/pick", test_pick, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
+  { (char*) "/draw", test_draw, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
+  { (char*) "/shuffle", test_shuffle, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
   { NULL, NULL, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL }
 };
 
@@ -113,7 +146,6 @@ static const MunitSuite test_suite = {
 /****************************************/
 /*                Runner                */
 /****************************************/
-
 
 #include <stdlib.h>
 

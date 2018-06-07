@@ -43,20 +43,23 @@ typedef struct card {
   int rank;     /**< Rank of the card. Detailed in description.     */
 } card;
 
+/**
+ A deck of cards.
+ */
 typedef struct deck {
-  card *cards;                 /**< An array of cards currently in the deck .          */
-  int total;                  /**< The total number of cards in the deck.             */
-                              /**< @warning Exceeding the max deck size is undefined. */
+  card *cards;                 /**< An array of cards currently in the deck.           */
+  int total;                   /**< The total number of cards in the deck.             */
 } deck;
 
 deck *deck_alloc(void);
 void deck_fill(deck*);
 void deck_free(deck*);
+void deck_add(deck *d, card *c);
 
 deck *deck_cut(deck*);
 card *deck_pick(deck*);
 card *deck_pick_rand(deck*);
-card *deck_draw(deck*, deck*);
-card *deck_draw_rand(deck*, deck*);
+card *deck_draw(deck*);
+card *deck_draw_rand(deck*);
 
 #endif
