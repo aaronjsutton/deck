@@ -3,12 +3,13 @@
 Deck is a library that models and manipulates a
 simulated deck of cards.  
 
-# Status
-
-Deck is currently _in early development_. **Stay tuned!**
+# Installation
 
 # Usage
 
+## Getting Started
+
+Read the [Quick Start Guide](https://github.com/aaronjsutton/deck/wiki/Deck-Quick-Start-Guide) to learn how to use Deck.
 
 ## Documentation
 For detailed usage, read the [API Documentation](https://docs.aaronjsutton.com/deck)

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:../wiki"
+      name = "wiki">
+      <FileRef
+         location = "group:Home.md">
+      </FileRef>
+      <FileRef
+         location = "group:Deck-Quick-Start-Guide.md">
+      </FileRef>
+   </Group>
    <FileRef
-      location = "self:deck.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

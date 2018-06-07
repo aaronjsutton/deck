@@ -17,4 +17,5 @@ DerivedData/
 *.a
 test-runner
 docs/*
+wiki/
 docs.tar.gz
