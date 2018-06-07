@@ -81,3 +81,14 @@ deck *deck_cut(deck *o) {
   n->total = c;
   return n;
 }
+
+/**
+ Pick a card from the top of the deck.
+ This method does remove the returned card from the deck.
+
+ @return The selected card.
+ @param d The deck to pick from.
+ */
+card *deck_pick(deck *d) {
+  return &(d->cards[d->total - 1]);
+}
