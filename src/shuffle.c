@@ -1,9 +1,10 @@
-//
-//  shuffle.c
-//  deck
-//
-//  Created by Aaron Sutton on 6/5/18.
-//
+/**
+ * @file shuffle.c
+ * Functions for shuffling decks of cards.
+ *
+ * Copyright © 2018, Aaron Sutton <aaronjsutton@icloud.com>
+ */
+
 
 #include <stdio.h>
 #include <stdlib.h>
