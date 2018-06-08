@@ -1,12 +1,12 @@
-  //
-  //  deck_unit_tests.m
-  //  deck-unit-tests
-  //
-  //  Created by Aaron Sutton on 6/5/18.
-  //
+//
+//  deck_unit_tests.m
+//  deck-unit-tests
+//
+//  Created by Aaron Sutton on 6/5/18.
+//
 
 #import <XCTest/XCTest.h>
-#import "test-wrapper.h"
+#import "test-bridge.h"
 #import "munit/munit.h"
 #import "../src/deck.h"
 
@@ -17,7 +17,7 @@
 @implementation deck_unit_tests
 
 /**
- µnit test wrapper.
+ µnit test wrapper for Xcode.
  */
 - (void)testDeck {
   int res = obcj_deck_tests();

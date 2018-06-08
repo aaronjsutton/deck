@@ -56,12 +56,11 @@
 /* Begin PBXFileReference section */
 		CC0E129320C77E95002A3839 /* example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = example; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0E129520C77E95002A3839 /* deal.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deal.c; sourceTree = "<group>"; };
-		CC0FED3A20C721E6001108A4 /* test-wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-wrapper.h"; sourceTree = "<group>"; };
+		CC0FED3A20C721E6001108A4 /* test-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-bridge.h"; sourceTree = "<group>"; };
 		CC1775D720C6D5CD00A183A2 /* Doxyfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
 		CC1775D820C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		CC1775D920C6D5CD00A183A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CC1775DD20C6D5CD00A183A2 /* deploy_rsa.enc */ = {isa = PBXFileReference; lastKnownFileType = text; path = deploy_rsa.enc; sourceTree = "<group>"; };
-		CC1775DF20C6D5CD00A183A2 /* upload_docs.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = upload_docs.rb; sourceTree = "<group>"; };
 		CC1775E020C6D5CD00A183A2 /* generate_docs.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = generate_docs.rb; sourceTree = "<group>"; };
 		CC1775E320C6D5CD00A183A2 /* deck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deck.h; sourceTree = "<group>"; };
 		CC1775E420C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -122,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				CC1775DB20C6D5CD00A183A2 /* deploy */,
-				CC1775DF20C6D5CD00A183A2 /* upload_docs.rb */,
 				CC1775E020C6D5CD00A183A2 /* generate_docs.rb */,
 			);
 			path = scripts;
@@ -153,7 +151,7 @@
 			children = (
 				CC1775ED20C6D5CD00A183A2 /* munit */,
 				CC1775FB20C6D5CD00A183A2 /* deck_tests.c */,
-				CC0FED3A20C721E6001108A4 /* test-wrapper.h */,
+				CC0FED3A20C721E6001108A4 /* test-bridge.h */,
 				CCEE8F1720C71D880097C60D /* deck_unit_tests.m */,
 				CC1775EC20C6D5CD00A183A2 /* Makefile */,
 				CCEE8F1920C71D880097C60D /* Info.plist */,
@@ -196,11 +194,11 @@
 				CC7152E920CA094D00D37C72 /* CONTRIBUTING.md */,
 				CC1775D920C6D5CD00A183A2 /* README.md */,
 				CC1775D720C6D5CD00A183A2 /* Doxyfile */,
+				CC1775D820C6D5CD00A183A2 /* Makefile */,
 				CCACB5DA20C743F5008AE676 /* assets.xcassets */,
 				CC1775DA20C6D5CD00A183A2 /* scripts */,
 				CC1775E120C6D5CD00A183A2 /* src */,
 				CC1775EA20C6D5CD00A183A2 /* test */,
-				CC1775D820C6D5CD00A183A2 /* Makefile */,
 				CC0E129420C77E95002A3839 /* example */,
 				CC17761320C6E69C00A183A2 /* Products */,
 				CCEE8F1D20C71D9F0097C60D /* Frameworks */,
