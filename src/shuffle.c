@@ -16,6 +16,9 @@
  Shuffle a deck using an algorithm that mimics a
  riffle shuffle.
 
+ @note For best results on an un-shuffled deck,
+ call this function multiple times.
+
  @param d The deck to shuffle.
  */
 void deck_riffle_shuffle(deck *d) {
@@ -43,3 +46,20 @@ void deck_riffle_shuffle(deck *d) {
 
 }
 
+
+/**
+Shuffle the cards using the Fisher-Yates algorithm.
+
+ @param d The deck to shuffle.
+ */
+void fisher_yates(deck *d) {
+  int i, r;
+  srand((unsigned int)time(0));
+  for (i = d->total - 1; i >= 1; i--) {
+    r = rand() % i;
+    card *tmp = malloc(sizeof(card));
+    memcpy(tmp, &d->cards[i], sizeof(card));
+    d->cards[i] = d->cards[r];
+    d->cards[r] = *tmp;
+  }
+}

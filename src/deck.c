@@ -147,3 +147,5 @@ card *deck_draw_rand(deck *d) {
   deck_resize(d, d->total);
   return &c;
 }
+
+

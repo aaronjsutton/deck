@@ -24,9 +24,9 @@
 		CC0E129620C77E95002A3839 /* deal.c in Sources */ = {isa = PBXBuildFile; fileRef = CC0E129520C77E95002A3839 /* deal.c */; };
 		CC0E129B20C77ED1002A3839 /* deck.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775E720C6D5CD00A183A2 /* deck.c */; };
 		CC0E129C20C77ED1002A3839 /* shuffle.c in Sources */ = {isa = PBXBuildFile; fileRef = CCACB5D920C74334008AE676 /* shuffle.c */; };
-		CC0FED3B20C72661001108A4 /* munit.o in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1775F020C6D5CD00A183A2 /* munit.o */; };
 		CCACB5DD20C747B4008AE676 /* deck.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775E720C6D5CD00A183A2 /* deck.c */; };
 		CCACB5DE20C747D1008AE676 /* shuffle.c in Sources */ = {isa = PBXBuildFile; fileRef = CCACB5D920C74334008AE676 /* shuffle.c */; };
+		CCE26CB620CB11A4009828D7 /* munit.o in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE26CB320CB1177009828D7 /* munit.o */; };
 		CCEE8F1820C71D880097C60D /* deck_unit_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEE8F1720C71D880097C60D /* deck_unit_tests.m */; };
 		CCEE8F2020C71ED10097C60D /* deck_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = CC1775FB20C6D5CD00A183A2 /* deck_tests.c */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 		CC0E129520C77E95002A3839 /* deal.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deal.c; sourceTree = "<group>"; };
 		CC0FED3A20C721E6001108A4 /* test-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-bridge.h"; sourceTree = "<group>"; };
 		CC1775D720C6D5CD00A183A2 /* Doxyfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
-		CC1775D820C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		CC1775D820C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; usesTabs = 1; };
 		CC1775D920C6D5CD00A183A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CC1775DD20C6D5CD00A183A2 /* deploy_rsa.enc */ = {isa = PBXFileReference; lastKnownFileType = text; path = deploy_rsa.enc; sourceTree = "<group>"; };
 		CC1775E020C6D5CD00A183A2 /* generate_docs.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = generate_docs.rb; sourceTree = "<group>"; };
@@ -66,24 +66,14 @@
 		CC1775E420C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		CC1775E720C6D5CD00A183A2 /* deck.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c; path = deck.c; sourceTree = "<group>"; };
 		CC1775E920C6D5CD00A183A2 /* shuffle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shuffle.h; sourceTree = "<group>"; };
-		CC1775EC20C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		CC1775EE20C6D5CD00A183A2 /* .dir-locals.el */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".dir-locals.el"; sourceTree = "<group>"; };
-		CC1775EF20C6D5CD00A183A2 /* munit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = munit.h; sourceTree = "<group>"; };
-		CC1775F020C6D5CD00A183A2 /* munit.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = munit.o; sourceTree = "<group>"; };
-		CC1775F120C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		CC1775F220C6D5CD00A183A2 /* .appveyor.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .appveyor.yml; sourceTree = "<group>"; };
-		CC1775F320C6D5CD00A183A2 /* meson.build */ = {isa = PBXFileReference; lastKnownFileType = text; path = meson.build; sourceTree = "<group>"; };
-		CC1775F420C6D5CD00A183A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CC1775F520C6D5CD00A183A2 /* example.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = example.c; sourceTree = "<group>"; };
-		CC1775F620C6D5CD00A183A2 /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
-		CC1775F720C6D5CD00A183A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		CC1775F820C6D5CD00A183A2 /* munit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = munit.c; sourceTree = "<group>"; };
-		CC1775F920C6D5CD00A183A2 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		CC1775EC20C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; usesTabs = 1; };
 		CC1775FB20C6D5CD00A183A2 /* deck_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deck_tests.c; sourceTree = "<group>"; };
 		CC7152E920CA094D00D37C72 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		CC7152EA20CA094D00D37C72 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
 		CCACB5D920C74334008AE676 /* shuffle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = shuffle.c; sourceTree = "<group>"; };
 		CCACB5DA20C743F5008AE676 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = SOURCE_ROOT; };
+		CCE26CB320CB1177009828D7 /* munit.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = munit.o; path = test/munit/munit.o; sourceTree = "<group>"; };
+		CCE26CB520CB119E009828D7 /* munit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = munit; sourceTree = "<group>"; };
 		CCEE8F1520C71D880097C60D /* deck-unit-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "deck-unit-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEE8F1720C71D880097C60D /* deck_unit_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = deck_unit_tests.m; sourceTree = "<group>"; };
 		CCEE8F1920C71D880097C60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC0FED3B20C72661001108A4 /* munit.o in Frameworks */,
+				CCE26CB620CB11A4009828D7 /* munit.o in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +139,7 @@
 		CC1775EA20C6D5CD00A183A2 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				CC1775ED20C6D5CD00A183A2 /* munit */,
+				CCE26CB520CB119E009828D7 /* munit */,
 				CC1775FB20C6D5CD00A183A2 /* deck_tests.c */,
 				CC0FED3A20C721E6001108A4 /* test-bridge.h */,
 				CCEE8F1720C71D880097C60D /* deck_unit_tests.m */,
@@ -157,25 +147,6 @@
 				CCEE8F1920C71D880097C60D /* Info.plist */,
 			);
 			path = test;
-			sourceTree = "<group>";
-		};
-		CC1775ED20C6D5CD00A183A2 /* munit */ = {
-			isa = PBXGroup;
-			children = (
-				CC1775EE20C6D5CD00A183A2 /* .dir-locals.el */,
-				CC1775EF20C6D5CD00A183A2 /* munit.h */,
-				CC1775F020C6D5CD00A183A2 /* munit.o */,
-				CC1775F120C6D5CD00A183A2 /* Makefile */,
-				CC1775F220C6D5CD00A183A2 /* .appveyor.yml */,
-				CC1775F320C6D5CD00A183A2 /* meson.build */,
-				CC1775F420C6D5CD00A183A2 /* README.md */,
-				CC1775F520C6D5CD00A183A2 /* example.c */,
-				CC1775F620C6D5CD00A183A2 /* COPYING */,
-				CC1775F720C6D5CD00A183A2 /* .gitignore */,
-				CC1775F820C6D5CD00A183A2 /* munit.c */,
-				CC1775F920C6D5CD00A183A2 /* .travis.yml */,
-			);
-			path = munit;
 			sourceTree = "<group>";
 		};
 		CC17761320C6E69C00A183A2 /* Products */ = {
@@ -209,6 +180,7 @@
 		CCEE8F1D20C71D9F0097C60D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCE26CB320CB1177009828D7 /* munit.o */,
 				CCEE8F1E20C71D9F0097C60D /* libdeck.a */,
 			);
 			name = Frameworks;

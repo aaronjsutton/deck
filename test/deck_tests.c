@@ -114,6 +114,8 @@ test_shuffle(const MunitParameter params[], void *fixture) {
   deck_fill(d);
   deck_riffle_shuffle(d);
   munit_assert_not_null(d);
+  fisher_yates(d);
+  munit_assert_not_null(d);
   return MUNIT_OK;
 }
 
