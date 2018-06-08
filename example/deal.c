@@ -11,19 +11,25 @@
 #include "../src/shuffle.h"
 
 int main(int argc, const char * argv[]) {
+  // Allocate a new deck.
   deck *p;
   p = deck_alloc();
+  // Fill the deck with the 52-card standard.
   deck_fill(p);
+  // Shuffle the deck.
   for (int i = 0; i <= 3; i++) {
     deck_riffle_shuffle(p);
   }
 
+  // Deal until our deck runs out of cards.
   while (p->total > 0) {
+    // Draw a card from the top of the deck.
     card *c = deck_draw(p);
+
+    // Strings to describe the card.
     char *suit_str, *rank_str;
 
-    switch (c->suit) {
-      case clubs:
+    switch (c->suit) {      case clubs:
         suit_str = "clubs";
         break;
       case diamonds:
@@ -58,9 +64,11 @@ int main(int argc, const char * argv[]) {
         break;
     }
 
+    // Print out which card we dealt.
     printf("You dealt the %s of %s \n", rank_str, suit_str);
   }
 
+  // Clean up and exit.
   deck_free(p);
   return 0;
 }
