@@ -62,4 +62,7 @@ card *deck_pick_rand(deck*);
 card *deck_draw(deck*);
 card *deck_draw_rand(deck*);
 
+char *card_ascii(card *c);
+char *card_unicode(card *c);
+
 #endif
