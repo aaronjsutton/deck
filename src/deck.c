@@ -10,7 +10,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include "deck.h"
-
 /**
  Allocate a new deck.
 
