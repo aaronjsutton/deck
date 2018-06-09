@@ -10,3 +10,4 @@
 #define RIFFLE_STACK_MAX	4
 
 void deck_riffle_shuffle(deck*);
+void deck_fisher_yates_shuffle(deck*);

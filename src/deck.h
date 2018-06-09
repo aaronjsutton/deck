@@ -15,6 +15,8 @@
 #define RANK_QUEEN  12
 #define RANK_KING   13
 
+#define CARD_DESC_MAX_BYTES	40
+
 typedef enum suit {
   clubs = 1,
   diamonds,
@@ -61,5 +63,8 @@ card *deck_pick(deck*);
 card *deck_pick_rand(deck*);
 card *deck_draw(deck*);
 card *deck_draw_rand(deck*);
+
+char *card_ascii(card *c);
+char *card_unicode(card *c);
 
 #endif

@@ -2,6 +2,7 @@ SRCDIR 	= src/
 TESTDIR = test/
 all:
 	$(MAKE) -C $(SRCDIR)
+	$(MAKE) -C $(TESTDIR)
 
 .PHONY: clean
 clean:
@@ -11,3 +12,6 @@ clean:
 .PHONY: test
 test:
 	$(MAKE) -C $(TESTDIR)
+
+install:
+	$(MAKE) -C $(SRCDIR) install
