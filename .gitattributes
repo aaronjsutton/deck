@@ -1,1 +1,2 @@
 Makefile linguist-detectable=false
+*.h linguist-language=c
