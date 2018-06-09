@@ -119,6 +119,18 @@ test_shuffle(const MunitParameter params[], void *fixture) {
   return MUNIT_OK;
 }
 
+static MunitResult
+test_print(const MunitParameter params[], void *fixture) {
+  card c = {spades, RANK_ACE};
+  card h = {hearts, RANK_QUEEN};
+
+  char *str = card_ascii(&c);
+  munit_assert_string_equal(str, "Ace of spades");
+  str = card_ascii(&h);
+  munit_assert_string_equal(str, "Queen of hearts");
+  return MUNIT_OK;
+}
+
 /****************************************/
 /*              Test Lists              */
 /****************************************/
@@ -130,6 +142,7 @@ static MunitTest test_suite_tests[] = {
   { (char*) "/pick", test_pick, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
   { (char*) "/draw", test_draw, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
   { (char*) "/shuffle", test_shuffle, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
+  { (char*) "/print", test_print, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL },
   { NULL, NULL, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL }
 };
 

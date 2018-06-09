@@ -63,7 +63,7 @@
 		CC1775DD20C6D5CD00A183A2 /* deploy_rsa.enc */ = {isa = PBXFileReference; lastKnownFileType = text; path = deploy_rsa.enc; sourceTree = "<group>"; };
 		CC1775E020C6D5CD00A183A2 /* generate_docs.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = generate_docs.rb; sourceTree = "<group>"; };
 		CC1775E320C6D5CD00A183A2 /* deck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deck.h; sourceTree = "<group>"; };
-		CC1775E420C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		CC1775E420C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; usesTabs = 1; };
 		CC1775E720C6D5CD00A183A2 /* deck.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c; path = deck.c; sourceTree = "<group>"; };
 		CC1775E920C6D5CD00A183A2 /* shuffle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shuffle.h; sourceTree = "<group>"; };
 		CC1775EC20C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; usesTabs = 1; };

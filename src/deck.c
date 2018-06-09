@@ -147,4 +147,54 @@ card *deck_draw_rand(deck *d) {
   return &c;
 }
 
+/**
+ Returns a string that is an ASCII-readable description of the
+ card. For example, "Ace of spades", "7 of hearts".
 
+ @warning The string is stored as static data, therefore it is overwritten
+ with every call.
+
+ @param c The card to describe.
+ @return The ASCII string describing it.
+ */
+char *card_ascii(card *c) {
+  static char desc[CARD_ASCII_MAX_BYTES];
+
+  switch (c->rank) {
+      case RANK_ACE:
+      sprintf(desc, "Ace");
+      break;
+      case RANK_JACK:
+      sprintf(desc, "Jack");
+      break;
+      case RANK_QUEEN:
+      sprintf(desc, "Queen");
+      break;
+      case RANK_KING:
+      sprintf(desc, "King");
+      break;
+    default:
+      sprintf(desc, "%d", c->rank);
+  }
+
+  sprintf(desc, "%s of ", desc);
+
+  switch (c->suit) {
+      case clubs:
+      sprintf(desc, "%sclubs", desc);
+      break;
+      case hearts:
+      sprintf(desc, "%shearts", desc);
+      break;
+      case diamonds:
+      sprintf(desc, "%sdiamonds", desc);
+      break;
+      case spades:
+      sprintf(desc, "%sspades", desc);
+      break;
+    default:
+      break;
+  }
+
+  return desc;
+}
