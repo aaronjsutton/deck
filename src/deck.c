@@ -10,7 +10,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include "deck.h"
-
 /**
  Allocate a new deck.
 
@@ -146,4 +145,104 @@ card *deck_draw_rand(deck *d) {
   }
   deck_resize(d, d->total);
   return &c;
+}
+
+static
+char *suit_str(card *c) {
+  static char suit[7];
+
+  switch (c->rank) {
+      case RANK_ACE:
+      sprintf(suit, "Ace");
+      break;
+      case RANK_JACK:
+      sprintf(suit, "Jack");
+      break;
+      case RANK_QUEEN:
+      sprintf(suit, "Queen");
+      break;
+      case RANK_KING:
+      sprintf(suit, "King");
+      break;
+    default:
+      sprintf(suit, "%d", c->rank);
+  }
+
+  return suit;
+}
+
+/**
+ Returns a string that is an ASCII-readable description of the
+ card. For example, "Ace of spades", "7 of hearts".
+ @since 0.2.0
+
+ @warning The string is stored as static data, therefore it is overwritten
+ with every call.
+
+ @param c The card to describe.
+ @return The ASCII string describing it.
+ */
+char *card_ascii(card *c) {
+  static char desc[CARD_DESC_MAX_BYTES];
+
+  char *suit = suit_str(c);
+
+  sprintf(desc, "%s of ", suit);
+
+  switch (c->suit) {
+      case clubs:
+      sprintf(desc, "%sclubs", desc);
+      break;
+      case hearts:
+      sprintf(desc, "%shearts", desc);
+      break;
+      case diamonds:
+      sprintf(desc, "%sdiamonds", desc);
+      break;
+      case spades:
+      sprintf(desc, "%sspades", desc);
+      break;
+    default:
+      break;
+  }
+
+  return desc;
+}
+
+/**
+ Returns a string that is a description of the
+ card. This string contains Unicode code points.
+ For example, "♠ Ace", "♥ 7".
+ @since 0.2.0
+
+ @warning The string is stored as static data, therefore it is overwritten
+ with every call.
+ @param c The card to describe.
+ @return The string descring the card.
+ */
+char *card_unicode(card *c) {
+  static char desc[CARD_DESC_MAX_BYTES];
+
+  char *suit = suit_str(c);
+
+  switch (c->suit) {
+      case clubs:
+      sprintf(desc, "\u2663");
+      break;
+      case hearts:
+      sprintf(desc, "\u2665");
+      break;
+      case diamonds:
+      sprintf(desc, "\u2666");
+      break;
+      case spades:
+      sprintf(desc, "\u2660");
+      break;
+    default:
+      break;
+  }
+
+  sprintf(desc, "%s %s", desc, suit);
+
+  return desc;
 }

@@ -1,7 +1,7 @@
 #include "munit/munit.h"
 #include "../src/deck.h"
 #include "../src/shuffle.h"
-#include "test-wrapper.h"
+#include "test-bridge.h"
 
 /****************************************/
 /*            Setup/Teardown            */
@@ -114,6 +114,20 @@ test_shuffle(const MunitParameter params[], void *fixture) {
   deck_fill(d);
   deck_riffle_shuffle(d);
   munit_assert_not_null(d);
+  deck_fisher_yates_shuffle(d);
+  munit_assert_not_null(d);
+  return MUNIT_OK;
+}
+
+static MunitResult
+test_print(const MunitParameter params[], void *fixture) {
+  card c = {spades, RANK_ACE};
+  card h = {hearts, RANK_QUEEN};
+
+  char *str = card_ascii(&c);
+  munit_assert_string_equal(str, "Ace of spades");
+  char *uni = card_unicode(&h);
+  munit_assert_string_equal(uni, "♥ Queen");
   return MUNIT_OK;
 }
 
@@ -128,6 +142,7 @@ static MunitTest test_suite_tests[] = {
   { (char*) "/pick", test_pick, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
   { (char*) "/draw", test_draw, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
   { (char*) "/shuffle", test_shuffle, setup_deck, teardown_deck, MUNIT_TEST_OPTION_NONE, NULL },
+  { (char*) "/print", test_print, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL },
   { NULL, NULL, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL }
 };
 

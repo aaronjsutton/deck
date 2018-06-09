@@ -3,6 +3,8 @@ SRCDIR  = ../src
 LFLAG  = -L$(SRCDIR)
 LDFLAGS = -ldeck
 
+all: test-runner
+
 test: test-runner
 	./test-runner
 

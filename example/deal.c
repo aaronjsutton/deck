@@ -1,5 +1,5 @@
 //
-//  main.c
+//  deal.c
 //  example
 //
 //  Created by Aaron Sutton on 6/5/18.
@@ -26,46 +26,11 @@ int main(int argc, const char * argv[]) {
     // Draw a card from the top of the deck.
     card *c = deck_draw(p);
 
-    // Strings to describe the card.
-    char *suit_str, *rank_str;
-
-    switch (c->suit) {      case clubs:
-        suit_str = "clubs";
-        break;
-      case diamonds:
-        suit_str = "diamonds";
-        break;
-      case spades:
-        suit_str = "spades";
-        break;
-      case hearts:
-        suit_str = "hearts";
-        break;
-      default:
-        break;
-    }
-
-    switch (c->rank) {
-      case RANK_ACE:
-        rank_str = "Ace";
-        break;
-      case RANK_JACK:
-        rank_str = "Jack";
-        break;
-      case RANK_QUEEN:
-        rank_str = "Queen";
-        break;
-      case RANK_KING:
-        rank_str = "King";
-        break;
-      default:
-        rank_str = malloc(sizeof(char) * 2);
-        sprintf(rank_str, "%i", c->rank);
-        break;
-    }
+    // Get a printable string of the card.
+    char *desc = card_unicode(c);
 
     // Print out which card we dealt.
-    printf("You dealt the %s of %s \n", rank_str, suit_str);
+    printf("You dealt %s \n", desc);
   }
 
   // Clean up and exit.
