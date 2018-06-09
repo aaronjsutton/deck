@@ -18,9 +18,10 @@ messages.each do |m|
         next
       end
     else
-      puts "#{File.dirname path}/#{m}" if File.basename(path) == file
+      puts "#{File.dirname pxath}/#{m}" if File.basename(path) == file
     end
   end
 end
+
 `rm make.log`
 exit 1 unless messages.empty?
