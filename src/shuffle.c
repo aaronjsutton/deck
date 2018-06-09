@@ -22,7 +22,7 @@
  @param d The deck to shuffle.
  */
 void deck_riffle_shuffle(deck *d) {
-  int i;
+  int i, r;
   deck *copy, *cut, *s;
   copy = deck_alloc();
   memcpy(copy->cards, d->cards, sizeof(card) * d->total);
@@ -33,8 +33,9 @@ void deck_riffle_shuffle(deck *d) {
 
   s = deck_alloc();
   srand((unsigned int)time(0));
+  r = rand() % 2 == 0;
   for (i = 0; i < copy->total; i++) {
-    if (rand() % 2 == 0) {
+    if (r) {
       deck_add(s, &copy->cards[i]);
       deck_add(s, &cut->cards[i]);
     } else {

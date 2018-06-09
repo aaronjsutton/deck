@@ -3,6 +3,7 @@
 Deck is a library that models and manipulates a
 simulated deck of cards.  
 
+![GitHub (pre-)release](https://img.shields.io/github/release/aaronjsutton/deck/all.svg)
 [![Build Status](https://travis-ci.com/aaronjsutton/deck.svg?branch=master)](https://travis-ci.com/aaronjsutton/deck)
 
 # Getting Started
