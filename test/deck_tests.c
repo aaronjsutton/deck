@@ -126,8 +126,8 @@ test_print(const MunitParameter params[], void *fixture) {
 
   char *str = card_ascii(&c);
   munit_assert_string_equal(str, "Ace of spades");
-  str = card_ascii(&h);
-  munit_assert_string_equal(str, "Queen of hearts");
+  char *uni = card_unicode(&h);
+  munit_assert_string_equal(uni, "♥ Queen");
   return MUNIT_OK;
 }
 

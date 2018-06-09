@@ -15,8 +15,7 @@
 #define RANK_QUEEN  12
 #define RANK_KING   13
 
-#define CARD_UNICODE_MAX_BYTES	5
-#define CARD_ASCII_MAX_BYTES		20
+#define CARD_DESC_MAX_BYTES	40
 
 typedef enum suit {
   clubs = 1,

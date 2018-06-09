@@ -24,4 +24,6 @@ messages.each do |m|
 end
 
 `rm make.log`
-exit 1 unless messages.empty?
+messages.each do |e|
+  exit 1 if e =~ /error/
+end
