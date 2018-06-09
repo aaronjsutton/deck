@@ -52,7 +52,7 @@ Shuffle the cards using the Fisher-Yates algorithm.
 
  @param d The deck to shuffle.
  */
-void fisher_yates(deck *d) {
+void deck_fisher_yates_shuffle(deck *d) {
   int i, r;
   srand((unsigned int)time(0));
   for (i = d->total - 1; i >= 1; i--) {
