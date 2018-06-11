@@ -64,6 +64,9 @@ void deck_add(deck *d, card *c) {
 /**
  Cuts a deck in half.
 
+ @note It is the caller's responsibility to free the returned
+ deck pointer.
+
  @param o The deck to cut. This deck is modified in place.
  @return The cut-off half of the original deck.
  */
