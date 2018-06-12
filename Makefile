@@ -11,7 +11,7 @@ clean:
 
 .PHONY: test
 test:
-	$(MAKE) -C $(TESTDIR)
+	$(MAKE) -C $(TESTDIR) test
 
 install:
 	$(MAKE) -C $(SRCDIR) install
