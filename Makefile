@@ -15,3 +15,6 @@ test:
 
 install:
 	$(MAKE) -C $(SRCDIR) install
+
+uninstall:
+	$(MAKE) -C $(SRCDIR) uninstall

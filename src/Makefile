@@ -1,7 +1,7 @@
 CC 		= gcc
 CFLAGS  = -Wall
 LIBNAME	= deck
-PREFIX = /usr/local/
+PREFIX = /usr/local
 
 all: deck.o shuffle.o
 	ar -r lib$(LIBNAME).a *.o
@@ -17,4 +17,9 @@ clean:
 	-rm *.o lib$(LIBNAME).a
 
 install: libdeck.a
-	install -m 0755 $(PREFIX)/lib/
+	install -m 0755 libdeck.a $(PREFIX)/lib/
+	install -m 0755 deck.h $(PREFIX)/include
+.PHONY: uninstall
+uninstall:
+	rm $(PREFIX)/lib/libdeck.a
+	rm $(PREFIX)/include/deck.h
