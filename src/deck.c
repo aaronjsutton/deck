@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 #include "deck.h"
 /**
@@ -55,6 +56,12 @@ void deck_fill(deck *d) {
   }
 }
 
+/**
+ Add a card to a deck.
+
+ @param d The deck to add to.
+ @param c The card to be added to `d`.
+ */
 void deck_add(deck *d, card *c) {
   d->total++;
   deck_resize(d, d->total);
