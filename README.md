@@ -1,4 +1,4 @@
-![Deck](https://github.com/aaronjsutton/deck/assets.xcassets/Logo.imageset/Logo@2x.png)
+![Deck](https://github.com/aaronjsutton/deck/blob/master/assets.xcassets/Logo.imageset/Logo.png)
 
 Deck is a library that models and manipulates a
 simulated deck of cards.  
