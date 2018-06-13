@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 #include "deck.h"
 /**
@@ -55,6 +56,12 @@ void deck_fill(deck *d) {
   }
 }
 
+/**
+ Add a card to a deck.
+
+ @param d The deck to add to.
+ @param c The card to be added to `d`.
+ */
 void deck_add(deck *d, card *c) {
   d->total++;
   deck_resize(d, d->total);
@@ -63,6 +70,9 @@ void deck_add(deck *d, card *c) {
 
 /**
  Cuts a deck in half.
+
+ @note It is the caller's responsibility to free the returned
+ deck pointer.
 
  @param o The deck to cut. This deck is modified in place.
  @return The cut-off half of the original deck.

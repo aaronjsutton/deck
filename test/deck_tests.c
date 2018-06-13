@@ -1,6 +1,5 @@
 #include "munit/munit.h"
 #include "../src/deck.h"
-#include "../src/shuffle.h"
 #include "test-bridge.h"
 
 /****************************************/

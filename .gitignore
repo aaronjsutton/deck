@@ -19,3 +19,4 @@ test-runner
 docs/*
 wiki/
 docs.tar.gz
+*.swp

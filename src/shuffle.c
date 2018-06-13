@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "shuffle.h"
+#include "deck.h"
 
 /**
  Shuffle a deck using an algorithm that mimics a
