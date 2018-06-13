@@ -16,6 +16,7 @@
 #define RANK_KING   13
 
 #define CARD_DESC_MAX_BYTES	40
+#define RIFFLE_STACK_MAX  4
 
 typedef enum suit {
   clubs = 1,
@@ -66,5 +67,10 @@ card *deck_draw_rand(deck*);
 
 char *card_ascii(card *c);
 char *card_unicode(card *c);
+
+
+void deck_riffle_shuffle(deck*);
+void deck_fisher_yates_shuffle(deck*);
+
 
 #endif

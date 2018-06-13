@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../src/deck.h"
-#include "../src/shuffle.h"
 
 int main(int argc, const char * argv[]) {
   // Allocate a new deck.

@@ -65,7 +65,6 @@
 		CC1775E320C6D5CD00A183A2 /* deck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deck.h; sourceTree = "<group>"; };
 		CC1775E420C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; usesTabs = 1; };
 		CC1775E720C6D5CD00A183A2 /* deck.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c; path = deck.c; sourceTree = "<group>"; };
-		CC1775E920C6D5CD00A183A2 /* shuffle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shuffle.h; sourceTree = "<group>"; };
 		CC1775EC20C6D5CD00A183A2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; usesTabs = 1; };
 		CC1775FB20C6D5CD00A183A2 /* deck_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deck_tests.c; sourceTree = "<group>"; };
 		CC7152E920CA094D00D37C72 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
@@ -134,9 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				CC1775E720C6D5CD00A183A2 /* deck.c */,
-				CC1775E320C6D5CD00A183A2 /* deck.h */,
 				CCACB5D920C74334008AE676 /* shuffle.c */,
-				CC1775E920C6D5CD00A183A2 /* shuffle.h */,
+				CC1775E320C6D5CD00A183A2 /* deck.h */,
 				CC1775E420C6D5CD00A183A2 /* Makefile */,
 			);
 			path = src;
