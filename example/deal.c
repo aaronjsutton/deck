@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "../src/deck.h"
+#include "deck.h"
 
 int main(int argc, const char * argv[]) {
   // Allocate a new deck.
